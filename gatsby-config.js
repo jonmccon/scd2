@@ -3,7 +3,7 @@ module.exports = {
     title: `Seattle Creative Directory`,
     author: `boop`,
     description: `A list of studios in Seattle`,
-    siteUrl: `https://unruffled-thompson-3c8fff.netlify.com`,
+    siteUrl: `http://seattlecreative.directory`,
     social: {
       twitter: `jonmccon`,
     },
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Seattle Creative Directory`,
+        short_name: `SCD`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
