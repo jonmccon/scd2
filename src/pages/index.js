@@ -18,7 +18,7 @@ class BlogIndex extends React.Component {
         <Bio />
         {posts.map(({ node }) => {
           
-          const title = node.studioName
+          const studio = node.studioName
           return (
             <div key={node.url}>
                 <h3
@@ -27,7 +27,7 @@ class BlogIndex extends React.Component {
                   }}
                 >
                   <Link style={{ boxShadow: `none` }} to={node.url}>
-                    {title}
+                    {studio}
                   </Link>
                 </h3>
                 
@@ -93,7 +93,6 @@ export const pageQuery = graphql`
         node {
           social
           studioName
-          tags
           url
         }
       }
