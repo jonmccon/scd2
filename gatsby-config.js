@@ -65,6 +65,12 @@ module.exports = {
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
+      resolve: 'gatsby-source-google-sheets',
+      options: {
+          spreadsheetId: '1Ey4_VPD4-KcGG8WiNt7IDIVy4_m5hK8OzvrvFgHOKWY',
+          worksheetTitle: 'production',
+          credentials: require('./scd-sheets-77cd9a602e1a.json')
+      }
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,

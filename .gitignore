@@ -1,3 +1,6 @@
+#clien Secret Google Drive api
+scd-sheets-77cd9a602e1a.json
+
 # Logs
 logs
 *.log
@@ -65,5 +68,6 @@ public
 yarn-error.log
 .pnp/
 .pnp.js
+
 # Yarn Integrity file
 .yarn-integrity

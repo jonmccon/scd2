@@ -10,36 +10,55 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+    const posts = data.allGoogleSheetProductionRow.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+          
+          const title = node.studioName
           return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
+            <div key={node.url}>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.url}>
+                    {title}
+                  </Link>
+                </h3>
+                
               
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-              <small>{node.frontmatter.tags}</small>
+                <small>{node.frontmatter.tags}</small>
+  
+              </div>
+            )
+          // const title = node.frontmatter.title || node.fields.slug
+          // return (
+          //   <div key={node.fields.slug}>
+          //     <h3
+          //       style={{
+          //         marginBottom: rhythm(1 / 4),
+          //       }}
+          //     >
+          //       <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+          //         {title}
+          //       </Link>
+          //     </h3>
+              
+          //     <p
+          //       dangerouslySetInnerHTML={{
+          //         __html: node.frontmatter.description || node.excerpt,
+          //       }}
+          //     />
+          //     <small>{node.frontmatter.tags}</small>
 
-            </div>
-          )
-        })}
+          //   </div>
+          // )
+        })} 
       </Layout>
     )
   }
@@ -66,6 +85,16 @@ export const pageQuery = graphql`
             title
             description
           }
+        }
+      }
+    }
+    allGoogleSheetProductionRow(sort: {fields: studioName, order: ASC}) {
+      edges {
+        node {
+          social
+          studioName
+          tags
+          url
         }
       }
     }
