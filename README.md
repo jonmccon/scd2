@@ -1,3 +1,5 @@
+Orig folder
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
@@ -18,7 +20,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Use the Gatsby CLI to create a new site, specifying the blog starter.
 
-    ```shell
+    ```sh
     # create a new Gatsby site using the blog starter
     gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
     ```
@@ -27,7 +29,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Navigate into your new site’s directory and start it up.
 
-    ```shell
+    ```sh
     cd my-blog-starter/
     gatsby develop
     ```
