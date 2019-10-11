@@ -42,10 +42,13 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby",
-    "calendar",
-    "events",
-    "google spreadsheet"
+    "seattle",
+    "creative",
+    "directory",
+    "list", 
+    "design", 
+    "studio",
+    "agency"
   ],
   "scripts": {
     "build": "gatsby build",
